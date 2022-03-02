@@ -7,13 +7,13 @@ const execute = async (client,msg,args) => {
 
     let count = Number(args.shift());
     if (isNaN(count)) {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Invalid count```");
+        await client.sendMessage(msg.to, `🙇‍♂️ *Hata*\n\n` + "```Geçersiz Sayı```");
         return 0;
     }
     if (count > 0)
         count = parseInt(count);
     else {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Count can't be zero.```");
+        await client.sendMessage(msg.to, `🙇‍♂️ *Hata*\n\n` + "```Sayı sıfır olamaz.```");
         return 0;
     }
     
@@ -40,7 +40,7 @@ const execute = async (client,msg,args) => {
             for (let i = 0; i < count; i++)
                 await client.sendMessage(msg.to, text);
         } else {
-            await client.sendMessage(msg.to, "```No text found for spamming!!! Please read !help spam.```");
+            await client.sendMessage(msg.to, "```İstenmeyen posta için metin bulunamadı!!! Lütfen !help spam'i okuyun.```");
         }
         
     }
@@ -48,9 +48,9 @@ const execute = async (client,msg,args) => {
 
 module.exports = {
     name: 'Spam',
-    description: 'spams a certain message for given number of times',
+    description: 'belirli bir mesajı belirli sayıda spam gönderir',
     command: '!spam',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Spam*\n\nSpam Messages. \n\n*!spam [count text]*\nOR\nreply *!spam [count]* to any message`,
+    help: `*Spam*\n\nSpam Messajları. \n\n*!spam [yazı sayısı]*\nOR\nYanıt Verin *!spam [sayı]* herhangi bir mesaja`,
     execute};

@@ -16,11 +16,11 @@ const execute = async (client, msg, args) => {
 };
 
 module.exports = {
-  name: "Search Song",
-  description: "Search songs on jiosaavn",
+  name: "Şarkı Ara",
+  description: "arkı ara",
   command: "!song",
   commandType: "plugin",
   isDependent: false,
-  help: `*Song*\n\nSearch a song and download it. \n\n*!song [search-query]*\nEx: !song makhna\n\nThen replay the message with *!dldsong [id]*\nEx. !dldsong 1\n\n⚡ Powered by musicder.net`,
+  help: `*Şarkı*\n\nBir şarkı arayın ve indirin.\n\n*!song [Arama Sonucu]*\nEx: !song ceg kafamız matiz\n\n⚡ Powered by musicder.net`,
   execute,
 };

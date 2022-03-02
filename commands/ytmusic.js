@@ -45,18 +45,18 @@ const execute = async (client,msg,args) => {
     }
 
     if (data == "error") {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to fetch the YouTube video```");
+        await client.sendMessage(msg.to, `🙇‍♂️ *Hata*\n\n` + "```YouTube videosunu getirirken Beklenmeyen Bir Şey Oldu```");
     } else {
-        await client.sendMessage(msg.to, new MessageMedia(data.image.mimetype, data.image.data, data.image.filename), { caption: `*${data.title}*\n\nViews: ` + "```" + data.views + "```\nLikes: " + "```" + data.likes + "```\nComments: " + "```" + data.comments + "```\n\n*Download Mp3* 👇\n" + "```" + data.download_link + "```" });
+        await client.sendMessage(msg.to, new MessageMedia(data.image.mimetype, data.image.data, data.image.filename), { caption: `*${data.title}*\n\nİzlenme: ` + "```" + data.views + "```\nBeğeni: " + "```" + data.likes + "```\nYorum: " + "```" + data.comments + "```\n\n*Mp3 İndirme Linki* 👇\n" + "```" + data.download_link + "```" });
     }
 };
 
 module.exports = {
   name: "YouTube Music",
-  description: "Download mp3 from a Youtube Link",
+  description: "Bir Youtube Linkinden mp3 indirin",
   command: "!ytmusic",
   commandType: "plugin",
   isDependent: false,
-  help: `*Youtube Music*\n\nDownload mp3 from a Youtube Link with this command.\n\n*!ytmusic [Youtube-Link]*\nor,\nReply a youtube link with *!ytmusic*`,
+  help: `*Youtube Music*\n\nBu komutla bir Youtube Linkinden mp3 indirin.\n\n*!ytmusic [Youtube-Link]*\nor,\nBir youtube bağlantısını *!ytmusic* ile yanıtlayın`,
   execute,
 };

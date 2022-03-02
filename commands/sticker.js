@@ -8,15 +8,15 @@ const execute = async (client,msg) => {
         let attachmentData = await quotedMsg.downloadMedia();
         await client.sendMessage(msg.to, new MessageMedia(attachmentData.mimetype, attachmentData.data, attachmentData.filename), { sendMediaAsSticker: true });
     } else {
-        await client.sendMessage(msg.to, `🙇‍♂️ *Error*\n\n` + "```No image found to make a Sticker```");
+        await client.sendMessage(msg.to, `🙇‍♂️ *Hata*\n\n` + "```Sticker Yapılacak Resim Bulunamadı```");
     }
 };
 
 module.exports = {
     name: 'Sticker Maker',
-    description: 'generates sticker from image',
+    description: 'Resimleri Stickere Dönüştürün',
     command: '!sticker',
     commandType: 'plugin',
     isDependent: false,
-    help: `*Sticker Maker*\n\nCreate sticker from Image.\n\nReply an image with *!sticker* to get a sticker of that image.`,
+    help: `*Sticker Maker*\n\nResimi Stickere Dönüştürün\n\nResime yanıt vererek *!sticker* yazınız.`,
     execute};

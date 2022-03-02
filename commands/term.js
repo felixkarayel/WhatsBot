@@ -17,8 +17,8 @@ const execute = async (client,msg,args) => {
 
 module.exports = {
     name: 'Terminal',
-    description: 'Use teminal remotely',
-    command: '!term',
+    description: 'Kullanılamaz',
+    command: '!kullanilamaz',
     commandType: 'plugin',
     isDependent: false,
     help: '*Terminal*\n\nYou can execute any command with this. By default it will run from _public_ directory. If you are leeching something it will be available publicly at\n_http://[Your-App-Url]/public_\n\n*!term [command]*\nTo execute a command. Ex: ```!term cd ./temp/```',

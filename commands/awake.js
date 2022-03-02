@@ -1,12 +1,12 @@
 //jshint esversion:8
 const execute = async (client, msg) => {
   client.sendPresenceAvailable();
-  msg.reply("```" + "I will be online from now." + "```");
+  msg.reply("```" + "bundan sonra online olacağım." + "```");
 };
 
 module.exports = {
-  name: "Awake",
-  description: "Stay online always !",
+  name: "Uyanmak",
+  description: "Her zaman çevrimiçi kalın !",
   command: "!awake",
   commandType: "plugin",
   isDependent: false,
