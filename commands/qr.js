@@ -30,10 +30,10 @@ const execute = async (client,msg,args) => {
 };
 
 module.exports = {
-    name: 'QR Kod Üreticisi',
-    description: 'Verilen metin için QR oluşturur',
+    name: 'QR generator',
+    description: 'Generates QR for given text',
     command: '!qr',
     commandType: 'plugin',
     isDependent: false,
-    help: '`*QR Kod Üreticisi*\n\nBu modül ile QR kodu oluşturun. Sadece sizin için QR Kod resmi oluşturacağı metni gönderin.\n\n*!qr [Yazı]*\nya da,\nOluşturmak için *!qr* ile bir mesajı yanıtlayın`',
+    help: '`*QR generator*\n\nGenerate QR code with this module. Just send the text it will generate QR Code image for you.\n\n*!qr [Text]*\nor,\nReply a message with *!qr* to Create`',
     execute};

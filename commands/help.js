@@ -3,9 +3,9 @@ const execute = async (client,msg,args) => {
     msg.delete(true);
     let commands =  client.commands;
     if(!args.length){
-        let adminHelp = '🔱 *Admin Komutları*\n\n';
-        let infoHelp = '🔱 *Bilgi*\n\n';
-        let pluginHelp = '🔱 *Pluginler*\n\n';
+        let adminHelp = '🔱 *Administration*\n\n';
+        let infoHelp = '🔱 *Info*\n\n';
+        let pluginHelp = '🔱 *Plugins*\n\n';
         commands.forEach((command) => {
             if(!command.isDependent){
                 if(command.commandType === 'admin')
@@ -26,16 +26,16 @@ const execute = async (client,msg,args) => {
     }
 
     else {
-        await client.sendMessage(msg.to, `Bu Komut Bulunamadı > *${args[0]}*...`);
+        await client.sendMessage(msg.to, `No command with the name *${args[0]}*...`);
     }
     
 };
 
 module.exports = {
     name: 'help',
-    description: 'mevcut komutlar hakkında bilgi alın',
+    description: 'get information about available commands',
     command: '!help',
     commandType: 'info',
     isDependent: false,
-    help: 'Daha fazla bilgi almak için ```!help [Komut]``` kullanın. Ör: ```!help ping```',
+    help: 'To get more info use ```!help [command]```. Ex: ```!help ping```',
     execute};
